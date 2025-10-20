@@ -2,6 +2,8 @@
 import styled from 'styled-components';
 import Avatar from '@/components/avatar/Avatar';
 
+import { useUserProfile } from '@/providers/UserProfileProvider';
+
 const Container = styled.header`
   margin-block: ${16 / 16}rem;
   width: 100%;
@@ -19,6 +21,8 @@ const RightSection = styled.section`
 `;
 
 const Header = () => {
+  const { user: profile } = useUserProfile();
+
   return (
     <Container>
       <h3>Monad</h3>
@@ -26,8 +30,8 @@ const Header = () => {
       <RightSection>
         <p>Docs</p>
         <Avatar
-          src="https://avatars.githubusercontent.com/u/57083494?v=4"
-          fallback="ab"
+          src={profile.avatar}
+          fallback={profile.displayName}
           size="small"
         />
       </RightSection>

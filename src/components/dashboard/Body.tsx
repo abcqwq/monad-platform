@@ -6,11 +6,17 @@ const Container = styled.header`
   width: 100%;
   padding: ${8 / 16}rem ${16 / 16}rem;
 
-  border: 1px solid #ccc;
+  border: 2px dotted #ccc;
+  border-radius: ${8 / 16}rem;
+  height: ${240 / 16}rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Body = () => {
-  return <Container>test</Container>;
+  return <Container>Create a New Project</Container>;
 };
 
 export default Body;
