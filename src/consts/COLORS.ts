@@ -7,12 +7,16 @@ export const LIGHT_COLORS = {
   '--color-text': 'hsl(0deg 0% 5%)',
   '--color-background': 'hsl(0deg 0% 100%)',
 
+  '--color-primary': 'hsl(230deg 15% 10%)',
+
   ...COMMON_COLORS
 };
 
 export const DARK_COLORS = {
   '--color-text': 'hsl(0deg 0% 100%)',
   '--color-background': 'hsl(230deg 20% 8%)',
+
+  '--color-primary': 'hsl(230deg 15% 10%)',
 
   ...COMMON_COLORS
 };

@@ -2,6 +2,7 @@
 import styled from 'styled-components';
 
 const AVATAR_SIZES = {
+  'super-small': `${24 / 16}rem`,
   small: `${36 / 16}rem`,
   medium: `${48 / 16}rem`,
   large: `${64 / 16}rem`,
@@ -24,7 +25,7 @@ type AvatarProps = {
   src: string;
   // todo: implement fallback system
   fallback: string;
-  size?: 'extra-large' | 'large' | 'medium' | 'small';
+  size?: 'extra-large' | 'large' | 'medium' | 'small' | 'super-small';
   alt?: string;
 };
 
