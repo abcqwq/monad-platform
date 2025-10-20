@@ -12,6 +12,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: ${16 / 16}rem;
 
   max-width: ${BREAKPOINTS.largeDesktop / 16}rem;
   width: 100%;
