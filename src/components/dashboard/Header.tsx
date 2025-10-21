@@ -1,6 +1,6 @@
 'use client';
 import styled from 'styled-components';
-import Avatar from '@/components/avatar/Avatar';
+import Avatar from '@/components/Avatar';
 
 import { useUserProfile } from '@/providers/UserProfileProvider';
 

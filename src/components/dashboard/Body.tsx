@@ -1,7 +1,8 @@
 'use client';
 import styled from 'styled-components';
-import Avatar from '@/components/avatar/Avatar';
+import Avatar from '@/components/Avatar';
 import Button from '@/components/Button';
+import Interactable from '@/components/Interactable';
 
 import { useUserProfile } from '@/providers/UserProfileProvider';
 
@@ -55,7 +56,9 @@ const Body = () => {
         </Button>
       </NewProjectNavigation>
 
-      <NewProjectContainer>Create a New Project</NewProjectContainer>
+      <Interactable>
+        <NewProjectContainer>Create a New Project</NewProjectContainer>
+      </Interactable>
     </Container>
   );
 };

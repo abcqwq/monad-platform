@@ -7,7 +7,6 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
 
-  // fallback for dvh incase it isn't supported
   height: 100vh;
   height: 100dvh;
 
