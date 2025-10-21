@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import SearchBar from '@/components/SearchBar';
 
 import { BREAKPOINTS } from '@/consts/BREAKPOINTS';
+import { useDeployables } from '@/providers/DeployablesProvider';
 
 const Layout = styled.div`
   width: 100%;
@@ -19,10 +20,15 @@ const SearchBarContainer = styled.div`
 `;
 
 const Body = () => {
+  const { deployables } = useDeployables();
+
   return (
     <Layout>
       <SearchBarContainer>
-        <SearchBar placeholder="What would you like to deploy?" />
+        <SearchBar
+          deployables={deployables}
+          placeholder="What would you like to deploy?"
+        />
       </SearchBarContainer>
     </Layout>
   );

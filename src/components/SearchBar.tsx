@@ -2,6 +2,7 @@
 import styled from 'styled-components';
 import Card from '@/components/Card';
 import Item from '@/components/Item';
+import type { GetDeployablesV1 } from '@/network/api/get-deployables-v1';
 
 const Bar = styled.section``;
 
@@ -25,9 +26,13 @@ const Input = styled.input`
 
 type Props = {
   placeholder?: string;
+
+  // bad practice, this makes SearchBar no longer context agnostic
+  // TODO: fix
+  deployables: GetDeployablesV1;
 };
 
-const SearchBar = ({ placeholder }: Props) => {
+const SearchBar = ({ placeholder, deployables }: Props) => {
   return (
     <Card>
       <Bar>
@@ -35,9 +40,13 @@ const SearchBar = ({ placeholder }: Props) => {
       </Bar>
 
       <ItemsContainer>
-        <Item nested={true}>GitHub Repository</Item>
-        <Item nested={true}>Database</Item>
-        <Item>Empty Project</Item>
+        {deployables.highlighted.map((deployable) => {
+          return (
+            <Item key={deployable.id} nested={deployable.isParent}>
+              {deployable.name}
+            </Item>
+          );
+        })}
       </ItemsContainer>
     </Card>
   );
