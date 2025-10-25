@@ -9,12 +9,20 @@ const Container = styled.div`
 
   width: 100%;
   height: ${48 / 16}rem;
+
+  /* border: 2px solid var(--color-primary); */
+  padding: ${8 / 16}rem ${12 / 16}rem;
 `;
 
-const Content = styled.div``;
+const Content = styled.div`
+  display: flex;
+  align-items: center;
+  gap: ${8 / 16}rem;
+`;
 
 const Img = styled.img`
   display: block;
+  height: ${22 / 16}rem;
 `;
 
 export type ItemProps = {

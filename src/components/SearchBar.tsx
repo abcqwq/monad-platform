@@ -12,7 +12,7 @@ const Input = styled.input`
   border: none;
 
   width: 100%;
-  padding: 0;
+  padding: ${8 / 16}rem ${12 / 16}rem;
 
   &:focus {
     outline: none;
