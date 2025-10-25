@@ -17,13 +17,13 @@ const Img = styled.img`
   display: block;
 `;
 
-type Props = {
+export type ItemProps = {
   children: React.ReactNode;
   img?: string;
   nested?: boolean;
 };
 
-const Item = ({ children, img, nested = false }: Props) => {
+const Item = ({ children, img, nested = false }: ItemProps) => {
   return (
     <Container>
       <Content>
