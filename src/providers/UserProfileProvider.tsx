@@ -1,6 +1,6 @@
 'use client';
 import { createContext, useContext, useState } from 'react';
-import type { UserProfile } from '@/entity/user-profile';
+import type { UserProfile } from '@/network/schemas/user-profile';
 
 type UserProfileContextType = { user: UserProfile };
 

@@ -1,19 +1,22 @@
 import { z } from 'zod';
 
-export const DeployableSchema = z
+const DeployableSchema = z
   .object({
     id: z.string(),
     name: z.string(),
-    illust: z.string(),
+    icon: z.string(),
     category: z.string(),
-    is_parent: z.boolean(),
+    is_parent: z.boolean()
   })
   .transform((data) => ({
     id: data.id,
     name: data.name,
-    illust: data.illust,
+    icon: data.icon,
     category: data.category,
-    isParent: data.is_parent,
+    isParent: data.is_parent
   }));
 
+export const GetDeployablesV1Schema = z.array(DeployableSchema);
+
 export type Deployable = z.infer<typeof DeployableSchema>;
+export type GetDeployablesV1 = z.infer<typeof GetDeployablesV1Schema>;

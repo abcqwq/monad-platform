@@ -1,11 +1,11 @@
 'use client';
 import { createContext, useContext, useState } from 'react';
-import type { GetDeployablesV1 } from '@/network/api/get-deployables-v1';
+import type { GetDeployablesV1 } from '@/network/schemas/deployable';
 
 type DeployablesContextType = { deployables: GetDeployablesV1 };
 
 const DeployablesContext = createContext<DeployablesContextType>({
-  deployables: {} as GetDeployablesV1
+  deployables: [] as GetDeployablesV1
 });
 
 export const useDeployables = () => {
